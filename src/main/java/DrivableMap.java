@@ -19,7 +19,7 @@ class DrivableMap {
      * as an empty HashMap.
      */
     public DrivableMap() {
-        drivable_map = new HashMap<>();
+        this.drivable_map = new HashMap<>();
     }
 
     /* TODO: Write a method named addDrivable that takes a String (the ID)
@@ -28,8 +28,8 @@ class DrivableMap {
      *       Return true if the Drivable was added to drivable_map.
      */
     public boolean addDrivable(String id, Drivable item) {
-        if (drivable_map.containsKey(id)) {
-            drivable_map.put(id, item);
+        if (this.drivable_map.containsKey(id)) {
+           this.drivable_map.put(id, item);
 
             return true;
         }
@@ -48,7 +48,7 @@ class DrivableMap {
      */
     public boolean hasFasterThan (int speed) {
 
-        for (Drivable currentVehicle: drivable_map.values()) {
+        for (Drivable currentVehicle: this.drivable_map.values()) {
             if (currentVehicle.getMaxSpeed() >= speed) {
                 return true;
             }
