@@ -68,7 +68,7 @@ class DrivableMap {
     public List<Tradable> getTradable() {
         List<Tradable> tradables = new ArrayList<>();
         
-        for (Drivable currentVehicle: drivable_map.values()) {
+        for (Drivable currentVehicle: this.drivable_map.values()) {
             if (currentVehicle instanceof Tradable) {
                 tradables.add((Tradable) currentVehicle);
             }
